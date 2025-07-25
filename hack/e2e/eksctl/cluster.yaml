@@ -28,6 +28,14 @@ iam:
         namespace: kube-system
       wellKnownPolicies:
         ebsCSIController: true
+      attachPolicy:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Action:
+              - "sagemaker:*"
+              - "eks:*"
+            Resource: "*"
 managedNodeGroups:
   - name: ng-linux
     amiFamily: {{ .Env.AMI_FAMILY }}

@@ -24,8 +24,8 @@ mkdir -p "${TEST_DIR}"
 CLUSTER_FILE=${TEST_DIR}/${CLUSTER_NAME}.${CLUSTER_TYPE}.yaml
 KUBECONFIG=${KUBECONFIG:-"${TEST_DIR}/${CLUSTER_NAME}.${CLUSTER_TYPE}.kubeconfig"}
 
-export AWS_REGION=${AWS_REGION:-us-west-2}
-ZONES=${AWS_AVAILABILITY_ZONES:-us-west-2a,us-west-2b,us-west-2c}
+export AWS_REGION=${AWS_REGION:-eu-central-1}
+ZONES=${AWS_AVAILABILITY_ZONES:-eu-central-1a,eu-central-1b,eu-central-1c}
 FIRST_ZONE=$(echo "${ZONES}" | cut -d, -f1)
 NODE_COUNT=${NODE_COUNT:-3}
 INSTANCE_TYPE=${INSTANCE_TYPE:-c5.large}
@@ -39,7 +39,7 @@ FIPS_TEST=${FIPS_TEST:-"false"}
 # kops: must include patch version (e.g. 1.19.1)
 # eksctl: mustn't include patch version (e.g. 1.19)
 K8S_VERSION_KOPS=${K8S_VERSION_KOPS:-1.33.2}
-K8S_VERSION_EKSCTL=${K8S_VERSION_EKSCTL:-1.33}
+K8S_VERSION_EKSCTL=${K8S_VERSION_EKSCTL:-1.32}
 
 EBS_INSTALL_SNAPSHOT=${EBS_INSTALL_SNAPSHOT:-"true"}
 EBS_INSTALL_SNAPSHOT_VERSION=${EBS_INSTALL_SNAPSHOT_VERSION:-"v8.3.0"}
