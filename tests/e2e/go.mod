@@ -1,7 +1,7 @@
 module github.com/kubernetes-sigs/aws-ebs-csi-driver/tests/e2e
 
 require (
-	github.com/aws/aws-sdk-go-v2 v1.37.0
+	github.com/aws/aws-sdk-go-v2 v1.37.2-zeta.4b2fc3924909
 	github.com/aws/aws-sdk-go-v2/config v1.30.1
 	github.com/aws/aws-sdk-go-v2/service/ec2 v1.237.0
 	github.com/google/uuid v1.6.0
@@ -21,16 +21,17 @@ require (
 	github.com/JeffAshton/win_pdh v0.0.0-20161109143554-76bb4ee9f0ab // indirect
 	github.com/Microsoft/go-winio v0.6.2 // indirect
 	github.com/antlr4-go/antlr/v4 v4.13.1 // indirect
-	github.com/aws/aws-sdk-go-v2/credentials v1.18.1 // indirect
-	github.com/aws/aws-sdk-go-v2/feature/ec2/imds v1.18.0 // indirect
-	github.com/aws/aws-sdk-go-v2/internal/configsources v1.4.0 // indirect
-	github.com/aws/aws-sdk-go-v2/internal/endpoints/v2 v2.7.0 // indirect
+	github.com/aws/aws-sdk-go-v2/credentials v1.18.3-zeta.4b2fc3924909 // indirect
+	github.com/aws/aws-sdk-go-v2/feature/ec2/imds v1.18.2-zeta.4b2fc3924909 // indirect
+	github.com/aws/aws-sdk-go-v2/internal/configsources v1.4.2-zeta.4b2fc3924909 // indirect
+	github.com/aws/aws-sdk-go-v2/internal/endpoints/v2 v2.7.2-zeta.4b2fc3924909 // indirect
 	github.com/aws/aws-sdk-go-v2/internal/ini v1.8.3 // indirect
 	github.com/aws/aws-sdk-go-v2/service/internal/accept-encoding v1.13.0 // indirect
-	github.com/aws/aws-sdk-go-v2/service/internal/presigned-url v1.13.0 // indirect
-	github.com/aws/aws-sdk-go-v2/service/sso v1.26.0 // indirect
-	github.com/aws/aws-sdk-go-v2/service/ssooidc v1.31.0 // indirect
-	github.com/aws/aws-sdk-go-v2/service/sts v1.35.0 // indirect
+	github.com/aws/aws-sdk-go-v2/service/internal/presigned-url v1.13.2-zeta.4b2fc3924909 // indirect
+	github.com/aws/aws-sdk-go-v2/service/sagemaker v1.0.0 // indirect
+	github.com/aws/aws-sdk-go-v2/service/sso v1.27.0-zeta.4b2fc3924909 // indirect
+	github.com/aws/aws-sdk-go-v2/service/ssooidc v1.32.0-zeta.4b2fc3924909 // indirect
+	github.com/aws/aws-sdk-go-v2/service/sts v1.36.0-zeta.4b2fc3924909 // indirect
 	github.com/aws/smithy-go v1.22.5 // indirect
 	github.com/awslabs/volume-modifier-for-k8s v0.7.0 // indirect
 	github.com/beorn7/perks v1.0.1 // indirect
@@ -189,5 +190,33 @@ replace (
 	k8s.io/sample-controller => k8s.io/sample-controller v0.33.2
 	vbom.ml/util => github.com/fvbommel/util v0.0.2 // Mitigate https://github.com/fvbommel/util/issues/6
 )
+
+replace github.com/aws/aws-sdk-go-v2 => /home/kellyzz/my_project/awsSdkGoV2
+
+replace github.com/aws/aws-sdk-go-v2/config => /home/kellyzz/my_project/awsSdkGoV2/config
+
+replace github.com/aws/aws-sdk-go-v2/credentials => /home/kellyzz/my_project/awsSdkGoV2/credentials
+
+replace github.com/aws/aws-sdk-go-v2/feature/ec2/imds => /home/kellyzz/my_project/awsSdkGoV2/feature/ec2/imds
+
+replace github.com/aws/aws-sdk-go-v2/internal/configsources => /home/kellyzz/my_project/awsSdkGoV2/internal/configsources
+
+replace github.com/aws/aws-sdk-go-v2/internal/endpoints/v2 => /home/kellyzz/my_project/awsSdkGoV2/internal/endpoints/v2
+
+replace github.com/aws/aws-sdk-go-v2/internal/ini => /home/kellyzz/my_project/awsSdkGoV2/internal/ini
+
+replace github.com/aws/aws-sdk-go-v2/service/ec2 => /home/kellyzz/my_project/awsSdkGoV2/service/ec2
+
+replace github.com/aws/aws-sdk-go-v2/service/internal/accept-encoding => /home/kellyzz/my_project/awsSdkGoV2/service/internal/accept-encoding
+
+replace github.com/aws/aws-sdk-go-v2/service/internal/presigned-url => /home/kellyzz/my_project/awsSdkGoV2/service/internal/presigned-url
+
+replace github.com/aws/aws-sdk-go-v2/service/sso => /home/kellyzz/my_project/awsSdkGoV2/service/sso
+
+replace github.com/aws/aws-sdk-go-v2/service/ssooidc => /home/kellyzz/my_project/awsSdkGoV2/service/ssooidc
+
+replace github.com/aws/aws-sdk-go-v2/service/sts => /home/kellyzz/my_project/awsSdkGoV2/service/sts
+
+replace github.com/aws/aws-sdk-go-v2/service/sagemaker => /home/kellyzz/my_project/aws-sdk-go-v2-sagemaker
 
 go 1.24.5
